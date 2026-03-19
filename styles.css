@@ -399,12 +399,38 @@ h1 em {
    ══════════════════════════════════════ */
 .pricing {
   padding-top: 6vh;
+  padding-bottom: 4vh;
+}
+
+.founder {
+  padding-top: 2vh;
   padding-bottom: 8vh;
+}
+
+.pricing-note {
+  font-size: 0.82rem;
+  color: var(--taupe);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.price-compare {
+  font-size: 0.78rem;
+  color: var(--taupe);
+  margin-bottom: 1rem;
+}
+
+.price-compare s {
+  color: var(--text);
 }
 
 .plan-grid {
   display: grid;
   gap: 1.5rem;
+}
+
+.founder-grid {
+  max-width: 700px;
 }
 
 .plan {
@@ -692,6 +718,7 @@ h1 em {
 
   .sched-grid { grid-template-columns: repeat(3, 1fr); }
   .plan-grid  { grid-template-columns: repeat(3, 1fr); }
+  .founder-grid { grid-template-columns: repeat(2, 1fr); }
 
   .disc {
     display: grid;
