@@ -4,330 +4,207 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Casa Boreal · Wellness Club</title>
-    <meta
-      name="description"
-      content="Casa Boreal Wellness Club: Barre, Pilates y Yoga. Un espacio para volver a ti. Move your body, center your soul."
-    />
+    <meta name="description" content="Casa Boreal Wellness Club: Barre, Pilates y Yoga. Un espacio para volver a ti." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jost:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
 
-    <!-- ─── HEADER ─── -->
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a href="#inicio" class="brand">
-          <span class="brand-name">Casa Boreal</span>
-          <span class="brand-sub">Wellness Club</span>
-        </a>
-        <button class="menu-btn" aria-expanded="false" aria-controls="main-nav">
-          <span></span><span></span><span></span>
-        </button>
-        <nav id="main-nav" class="main-nav">
-          <a href="#filosofia">Filosofía</a>
-          <a href="#disciplinas">Disciplinas</a>
-          <a href="#horarios">Horarios</a>
-          <a href="#planes">Planes</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
-      </div>
+    <header class="header">
+      <a href="#" class="logo">
+        <span class="logo-name">Casa Boreal</span>
+        <span class="logo-sub">Wellness Club</span>
+      </a>
+      <button class="burger" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="nav">
+        <a href="#disciplinas">Disciplinas</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#planes">Planes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
     </header>
 
     <main>
 
-      <!-- ─── HERO ─── -->
-      <section id="inicio" class="hero reveal">
-        <div class="container hero-inner">
-          <p class="hero-tagline">Move your body, center your soul</p>
-          <h1>
-            Bienvenida a un espacio donde
-            <em>el movimiento se vuelve un ritual.</em>
-          </h1>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#contacto">Reservar clase prueba</a>
-            <a class="btn btn-ghost" href="#disciplinas">Conocer disciplinas</a>
+      <section class="hero fade-in">
+        <p class="hero-tag">Move your body, center your soul</p>
+        <h1>Bienvenida a un espacio<br>donde el movimiento<br><em>se vuelve un ritual.</em></h1>
+        <a class="cta" href="#contacto">Reservar clase prueba</a>
+      </section>
+
+      <section class="quote fade-in">
+        <blockquote>&ldquo;Un espacio para volver a ti.&rdquo;</blockquote>
+      </section>
+
+      <section class="about fade-in">
+        <p>En la naturaleza, cuando distintas fuerzas se alinean, sucede algo extraordinario: la luz de la aurora boreal aparece.</p>
+        <p>En Casa Boreal creemos que el bienestar nace de ese mismo equilibrio. Cuando conectas tu cuerpo, tu mente y tu interior, todo cambia.</p>
+        <p><em>&ldquo;El autocuidado no es un lujo, es una necesidad.&rdquo;</em></p>
+      </section>
+
+      <section id="disciplinas" class="disciplines fade-in">
+        <h2>Nuestras Disciplinas</h2>
+
+        <div class="disc">
+          <div class="disc-top">
+            <h3>Barre</h3>
+            <span class="phonetic">[ba:r]</span>
+          </div>
+          <p>Fusión de ballet, pilates y ejercicios funcionales. Movimientos pequeños, precisos y repetitivos para tonificar profundamente.</p>
+          <ul>
+            <li>Piernas y glúteos más firmes</li>
+            <li>Mayor resistencia muscular</li>
+            <li>Mejora equilibrio y coordinación</li>
+            <li>Cuerpo estilizado</li>
+          </ul>
+        </div>
+
+        <div class="disc">
+          <div class="disc-top">
+            <h3>Pilates</h3>
+            <span class="phonetic">[pi·la·tes]</span>
+          </div>
+          <p>Mejora la fuerza, estabilidad y alineación corporal. Fuerza desde el centro, control en cada movimiento.</p>
+          <ul>
+            <li>Abdomen más fuerte y definido</li>
+            <li>Mejora la postura</li>
+            <li>Reduce dolores de espalda</li>
+            <li>Mayor conexión cuerpo-mente</li>
+          </ul>
+        </div>
+
+        <div class="disc">
+          <div class="disc-top">
+            <h3>Yoga</h3>
+            <span class="phonetic">[ˈjo.ɣa]</span>
+          </div>
+          <p>Integra movimiento, respiración y conciencia para equilibrar cuerpo y mente.</p>
+          <ul>
+            <li>Reduce la ansiedad</li>
+            <li>Mejora tu respiración</li>
+            <li>Crea bienestar integral</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="quote fade-in">
+        <blockquote>&ldquo;Your body loves you, love it back.&rdquo;</blockquote>
+      </section>
+
+      <section id="horarios" class="schedules fade-in">
+        <h2>Horarios</h2>
+        <div class="sched-grid">
+          <div class="sched">
+            <h3>Lunes a Viernes</h3>
+            <p>6:30 AM — Barre</p>
+            <p>8:00 AM — Pilates</p>
+            <p>6:30 PM — Yoga</p>
+          </div>
+          <div class="sched">
+            <h3>Sábado</h3>
+            <p>8:00 AM — Barre + Core</p>
+            <p>9:30 AM — Pilates Técnica</p>
+            <p>11:00 AM — Yoga Restaurativo</p>
+          </div>
+          <div class="sched">
+            <h3>Domingo</h3>
+            <p>9:00 AM — Slow Flow</p>
+            <p>10:30 AM — Breathwork</p>
+            <p>12:00 PM — Talleres</p>
           </div>
         </div>
       </section>
 
-      <!-- ─── QUOTE STRIP ─── -->
-      <section class="quote-strip reveal">
-        <div class="container">
-          <blockquote>
-            &ldquo;Un espacio para volver a ti.&rdquo;
-          </blockquote>
-        </div>
+      <section class="quote fade-in">
+        <blockquote>&ldquo;Move your body, center your soul.&rdquo;</blockquote>
       </section>
 
-      <!-- ─── FILOSOFÍA ─── -->
-      <section id="filosofia" class="filosofia container reveal">
-        <div class="filosofia-text">
-          <p class="eyebrow">Nuestra Filosofía</p>
-          <h2>Cuando conectas tu cuerpo, tu mente y tu interior, todo cambia.</h2>
-          <p>
-            En la naturaleza, cuando distintas fuerzas se alinean, sucede algo
-            extraordinario: la luz de la aurora boreal aparece. En Casa Boreal
-            creemos que el bienestar nace de ese mismo equilibrio.
-          </p>
-          <p>
-            Te mueves, te fortaleces y te encuentras&hellip; para brillar desde
-            tu centro. De ahí nace el concepto:
-          </p>
-          <p class="filosofia-phrase">
-            <em>&ldquo;El autocuidado no es un lujo, es una necesidad.&rdquo;</em>
-          </p>
-        </div>
-      </section>
-
-      <!-- ─── DISCIPLINAS ─── -->
-      <section id="disciplinas" class="disciplinas container reveal">
-        <p class="eyebrow">Nuestras Disciplinas</p>
-        <h2>Tres caminos, un mismo centro</h2>
-
-        <div class="disc-grid">
-
-          <!-- BARRE -->
-          <article class="disc-card">
-            <div class="disc-header">
-              <h3>Barre</h3>
-              <p class="disc-phonetic">[ba:r] &middot; noun</p>
-            </div>
-            <p class="disc-def">
-              Barre es una fusión de ballet, pilates y ejercicios funcionales que
-              combina movimientos pequeños, precisos y repetitivos para tonificar
-              profundamente el cuerpo.
-            </p>
-            <p class="disc-claim">Esculpe y alarga tus músculos sin generar volumen excesivo.</p>
-            <ul>
-              <li>Piernas y glúteos más firmes</li>
-              <li>Mayor resistencia muscular</li>
-              <li>Mejora equilibrio y coordinación</li>
-              <li>Cuerpo estilizado</li>
-            </ul>
-          </article>
-
-          <!-- PILATES -->
-          <article class="disc-card">
-            <div class="disc-header">
-              <h3>Pilates</h3>
-              <p class="disc-phonetic">[pi&middot;la&middot;tes] &middot; noun</p>
-            </div>
-            <p class="disc-def">
-              Mejora la fuerza, estabilidad y alineación corporal a través de
-              movimientos controlados y respiración consciente.
-            </p>
-            <p class="disc-claim">Fuerza desde el centro, control en cada movimiento.</p>
-            <ul>
-              <li>Abdomen más fuerte y definido</li>
-              <li>Mejora la postura</li>
-              <li>Reduce dolores de espalda</li>
-              <li>Mayor control y conexión cuerpo-mente</li>
-            </ul>
-          </article>
-
-          <!-- YOGA -->
-          <article class="disc-card">
-            <div class="disc-header">
-              <h3>Yoga</h3>
-              <p class="disc-phonetic">[&rsquo;jo.&gamma;a]</p>
-            </div>
-            <p class="disc-def">
-              Yoga es una práctica que integra movimiento, respiración y conciencia
-              para equilibrar cuerpo y mente.
-            </p>
-            <p class="disc-claim">Reduce el estrés, mejora la flexibilidad y conecta contigo.</p>
-            <ul>
-              <li>Reduce la ansiedad</li>
-              <li>Mejora tu respiración</li>
-              <li>Crea bienestar integral</li>
-            </ul>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ─── QUOTE 2 ─── -->
-      <section class="quote-strip reveal">
-        <div class="container">
-          <blockquote>
-            &ldquo;Your body loves you, love it back.&rdquo;
-          </blockquote>
-        </div>
-      </section>
-
-      <!-- ─── HORARIOS ─── -->
-      <section id="horarios" class="schedule container reveal">
-        <p class="eyebrow">Horarios</p>
-        <h2>Encuentra tu ritmo semanal</h2>
-        <div class="schedule-grid">
-          <article class="schedule-card">
-            <h3>Lunes a Viernes</h3>
-            <p><strong>6:30 AM</strong> Barre</p>
-            <p><strong>8:00 AM</strong> Pilates</p>
-            <p><strong>6:30 PM</strong> Yoga</p>
-          </article>
-          <article class="schedule-card">
-            <h3>Sábado</h3>
-            <p><strong>8:00 AM</strong> Barre + Core</p>
-            <p><strong>9:30 AM</strong> Pilates Técnica</p>
-            <p><strong>11:00 AM</strong> Yoga Restaurativo</p>
-          </article>
-          <article class="schedule-card">
-            <h3>Domingo</h3>
-            <p><strong>9:00 AM</strong> Slow Flow</p>
-            <p><strong>10:30 AM</strong> Breathwork + Stretch</p>
-            <p><strong>12:00 PM</strong> Talleres especiales</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- ─── MÉTRICAS ─── -->
-      <section id="experiencia" class="metrics container reveal">
-        <article>
-          <p class="value">+500</p>
-          <p class="label">alumnas y alumnos activos</p>
-        </article>
-        <article>
-          <p class="value">3</p>
-          <p class="label">disciplinas integradas</p>
-        </article>
-        <article>
-          <p class="value">90%</p>
-          <p class="label">renovación mensual</p>
-        </article>
-      </section>
-
-      <!-- ─── QUOTE 3 ─── -->
-      <section class="quote-strip reveal">
-        <div class="container">
-          <blockquote>
-            &ldquo;Move your body, center your soul.&rdquo;
-          </blockquote>
-        </div>
-      </section>
-
-      <!-- ─── PLANES ─── -->
-      <section id="planes" class="plans container reveal">
-        <p class="eyebrow">Planes</p>
-        <h2>Elige cómo quieres avanzar</h2>
+      <section id="planes" class="pricing fade-in">
+        <h2>Planes</h2>
         <div class="plan-grid">
-          <article class="plan-card">
+          <div class="plan">
             <h3>Inicio</h3>
-            <p class="plan-price">$790<span>/mes</span></p>
+            <p class="price">$790<span>/mes</span></p>
             <ul>
               <li>4 clases al mes</li>
-              <li>Acceso a 1 disciplina</li>
+              <li>1 disciplina</li>
               <li>Asesoría inicial</li>
             </ul>
-            <a href="#contacto" class="btn btn-ghost">Quiero empezar</a>
-          </article>
-          <article class="plan-card featured">
-            <p class="plan-badge">Más elegido</p>
+            <a class="cta-s" href="#contacto">Empezar</a>
+          </div>
+          <div class="plan highlight">
+            <span class="badge">Más elegido</span>
             <h3>Integral</h3>
-            <p class="plan-price">$1,490<span>/mes</span></p>
+            <p class="price">$1,490<span>/mes</span></p>
             <ul>
               <li>12 clases al mes</li>
-              <li>Acceso a Barre, Pilates y Yoga</li>
+              <li>Barre, Pilates y Yoga</li>
               <li>Seguimiento de progreso</li>
             </ul>
-            <a href="#contacto" class="btn btn-primary">Reservar valoración</a>
-          </article>
-          <article class="plan-card">
+            <a class="cta" href="#contacto">Reservar</a>
+          </div>
+          <div class="plan">
             <h3>Unlimited</h3>
-            <p class="plan-price">$2,090<span>/mes</span></p>
+            <p class="price">$2,090<span>/mes</span></p>
             <ul>
               <li>Clases ilimitadas</li>
               <li>Prioridad en talleres</li>
               <li>Sesión mensual 1:1</li>
             </ul>
-            <a href="#contacto" class="btn btn-ghost">Quiero todo el acceso</a>
-          </article>
+            <a class="cta-s" href="#contacto">Acceso total</a>
+          </div>
         </div>
       </section>
 
-      <!-- ─── FAQ ─── -->
-      <section id="faq" class="faq container reveal">
-        <p class="eyebrow">Preguntas Frecuentes</p>
-        <h2>Todo lo que necesitas saber</h2>
+      <section id="faq" class="faq fade-in">
+        <h2>Preguntas Frecuentes</h2>
         <details>
-          <summary>¿Necesito experiencia previa para empezar?</summary>
-          <p>
-            No. Tenemos clases para nivel inicial y te guiamos para elegir la mejor
-            combinación según tu condición física y objetivos.
-          </p>
+          <summary>¿Necesito experiencia previa?</summary>
+          <p>No. Tenemos clases para nivel inicial y te guiamos para elegir la mejor combinación.</p>
         </details>
         <details>
           <summary>¿Qué debo llevar a mi primera clase?</summary>
-          <p>
-            Ropa cómoda, agua y toalla. Si no tienes mat o accesorios, nosotros te
-            prestamos el material.
-          </p>
+          <p>Ropa cómoda, agua y toalla. Si no tienes mat, nosotros te lo prestamos.</p>
         </details>
         <details>
-          <summary>¿Puedo combinar Barre, Pilates y Yoga en el mismo plan?</summary>
-          <p>
-            Sí. El plan Integral y Unlimited incluyen acceso a las tres disciplinas.
-          </p>
+          <summary>¿Puedo combinar las tres disciplinas?</summary>
+          <p>Sí. El plan Integral y Unlimited incluyen acceso a Barre, Pilates y Yoga.</p>
         </details>
       </section>
 
-      <!-- ─── CONTACTO ─── -->
-      <section id="contacto" class="contact container reveal">
-        <div class="contact-info">
-          <p class="eyebrow">Agenda Hoy</p>
-          <h2>Empieza tu semana con una clase consciente</h2>
-          <p>
-            Escríbenos por WhatsApp o déjanos tus datos para enviarte horarios,
-            promociones y una recomendación de programa según tus objetivos.
-          </p>
+      <section id="contacto" class="contact fade-in">
+        <div class="contact-text">
+          <h2>Agenda tu clase</h2>
+          <p>Déjanos tus datos y te enviamos horarios y una recomendación personalizada.</p>
         </div>
-
-        <form class="contact-form" action="#" method="post">
-          <label for="name">Nombre</label>
-          <input id="name" name="name" type="text" placeholder="Tu nombre" required />
-
-          <label for="email">Correo</label>
-          <input id="email" name="email" type="email" placeholder="tu@email.com" required />
-
-          <label for="phone">WhatsApp</label>
-          <input id="phone" name="phone" type="tel" placeholder="+52 000 000 0000" required />
-
-          <label for="goal">Objetivo principal</label>
-          <select id="goal" name="goal" required>
-            <option value="" selected disabled>Selecciona una opción</option>
+        <form class="form" action="#" method="post">
+          <input type="text" name="name" placeholder="Nombre" required />
+          <input type="email" name="email" placeholder="Correo" required />
+          <input type="tel" name="phone" placeholder="WhatsApp" required />
+          <select name="goal" required>
+            <option value="" disabled selected>Objetivo</option>
             <option value="fuerza">Ganar fuerza</option>
             <option value="movilidad">Mejorar movilidad</option>
             <option value="estres">Reducir estrés</option>
           </select>
-
-          <label for="message">Mensaje</label>
-          <textarea id="message" name="message" rows="4" placeholder="Cuéntanos tu disponibilidad y si tienes alguna lesión."></textarea>
-
-          <button class="btn btn-primary" type="submit">Quiero mi clase prueba</button>
-          <p class="form-note">Te respondemos en menos de 24 horas.</p>
+          <textarea name="message" rows="3" placeholder="Mensaje (opcional)"></textarea>
+          <button class="cta" type="submit">Quiero mi clase prueba</button>
         </form>
       </section>
+
     </main>
 
-    <!-- ─── FLOATING WA ─── -->
-    <a class="floating-wa" href="https://wa.me/525500000000" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="currentColor"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.96 7.96 0 0 1-4.106-1.138l-.294-.176-2.866.852.852-2.866-.176-.294A7.96 7.96 0 0 1 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z" fill="currentColor"/></svg>
+    <a class="wa" href="https://wa.me/525500000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.96 7.96 0 01-4.106-1.138l-.294-.176-2.866.852.852-2.866-.176-.294A7.96 7.96 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
     </a>
 
-    <!-- ─── FOOTER ─── -->
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <div class="footer-brand">
-          <p class="footer-name">Casa Boreal</p>
-          <p class="footer-club">Wellness Club</p>
-        </div>
-        <p class="footer-copy">Barre &middot; Pilates &middot; Yoga</p>
-      </div>
+    <footer class="footer">
+      <span class="logo-name">Casa Boreal</span>
+      <span class="logo-sub">Wellness Club</span>
     </footer>
 
     <script src="script.js"></script>

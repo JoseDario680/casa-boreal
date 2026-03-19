@@ -1,73 +1,53 @@
-/* ═══════════════════════════════════════════════
-   Casa Boreal · Wellness Club — Script
-   ═══════════════════════════════════════════════ */
+/* Casa Boreal · Wellness Club · JS */
 
-const menuButton = document.querySelector('.menu-btn');
-const nav = document.querySelector('.main-nav');
-const contactForm = document.querySelector('.contact-form');
-const faqItems = document.querySelectorAll('.faq details');
+(function () {
+  "use strict";
 
-/* ─── Mobile menu ─── */
-if (menuButton && nav) {
-  menuButton.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    menuButton.classList.toggle('is-open', isOpen);
-    menuButton.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      menuButton.classList.remove('is-open');
-      menuButton.setAttribute('aria-expanded', 'false');
+  /* ── Burger menu ── */
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav");
+  if (burger) {
+    burger.addEventListener("click", () => {
+      nav.classList.toggle("open");
     });
-  });
-}
+    nav.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => nav.classList.remove("open"))
+    );
+  }
 
-/* ─── Reveal on scroll ─── */
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
+  /* ── Scroll fade-in ── */
+  const faders = document.querySelectorAll(".fade-in");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    faders.forEach((el) => io.observe(el));
+  } else {
+    faders.forEach((el) => el.classList.add("visible"));
+  }
+
+  /* ── Form feedback ── */
+  const form = document.querySelector(".form");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const orig = btn.textContent;
+      btn.textContent = "Enviado ✓";
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.disabled = false;
+        form.reset();
+      }, 2500);
     });
-  },
-  { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-);
-
-document.querySelectorAll('.reveal').forEach((el) => {
-  observer.observe(el);
-});
-
-/* ─── FAQ accordion ─── */
-faqItems.forEach((item) => {
-  item.addEventListener('toggle', () => {
-    if (!item.open) return;
-    faqItems.forEach((other) => {
-      if (other !== item) other.open = false;
-    });
-  });
-});
-
-/* ─── Contact form ─── */
-if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const button = contactForm.querySelector('button[type="submit"]');
-
-    if (button) {
-      button.textContent = '¡Enviado!';
-      button.disabled = true;
-    }
-
-    contactForm.reset();
-
-    setTimeout(() => {
-      if (button) {
-        button.textContent = 'Quiero mi clase prueba';
-        button.disabled = false;
-      }
-    }, 2200);
-  });
-}
+  }
+})();
