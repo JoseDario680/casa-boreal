@@ -229,7 +229,7 @@ h1 em {
   font-weight: 300;
   font-size: clamp(1.3rem, 4.5vw, 2rem);
   color: var(--head);
-  max-width: 560px;
+  max-width: 680px;
   margin: 0 auto;
   line-height: 1.4;
 }
@@ -240,12 +240,9 @@ h1 em {
 .about {
   padding-top: 8vh;
   padding-bottom: 6vh;
-  max-width: 580px;
 }
 
-.about p {
-  margin-bottom: 1.4rem;
-}
+.about p {\n  margin-bottom: 1.4rem;\n  max-width: 620px;\n}
 
 .about em {
   font-family: "Cormorant Garamond", serif;
@@ -309,7 +306,6 @@ h1 em {
 }
 
 .disc p {
-  max-width: 520px;
   margin-bottom: 1rem;
   font-size: 0.92rem;
 }
@@ -461,7 +457,6 @@ h1 em {
 .faq {
   padding-top: 6vh;
   padding-bottom: 6vh;
-  max-width: 620px;
 }
 
 .faq details {
@@ -669,6 +664,20 @@ h1 em {
   .sched-grid { grid-template-columns: repeat(3, 1fr); }
   .plan-grid  { grid-template-columns: repeat(3, 1fr); }
 
+  .disc {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 0 3rem;
+  }
+
+  .disc-top { grid-column: 1; }
+  .disc p   { grid-column: 2; grid-row: 1 / 3; }
+  .disc ul  { grid-column: 2; }
+
+  .faq details {
+    max-width: 700px;
+  }
+
   .contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -689,7 +698,15 @@ h1 em {
   .header { padding: 1rem 14vw; }
   .footer { padding: 3rem 14vw; }
 
-  h1 { font-size: 3.6rem; }
+  h1 { font-size: 3.6rem; max-width: 800px; }
+
+  .about p { max-width: 720px; }
+
+  .disc {
+    grid-template-columns: 300px 1fr;
+  }
+
+  .faq details { max-width: 800px; }
 
   .wa { right: 2rem; bottom: 2rem; }
 }
