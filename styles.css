@@ -145,6 +145,35 @@ img { max-width: 100%; display: block; }
   padding-bottom: 14vh;
 }
 
+/* ─── Social bar ─── */
+.social-bar {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.social-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--taupe);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.social-bar a:hover {
+  color: var(--dark);
+  border-color: var(--dark);
+}
+
+.social-bar svg {
+  width: 16px;
+  height: 16px;
+}
+
 .hero-tag {
   font-family: "Jost", sans-serif;
   font-weight: 300;
