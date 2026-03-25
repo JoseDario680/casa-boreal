@@ -433,6 +433,59 @@ h1 em {
   max-width: 700px;
 }
 
+.pricing-sub {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--taupe);
+  margin-bottom: 2rem;
+}
+
+.founder-benefits {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  max-width: 500px;
+}
+
+.founder-benefits h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.founder-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.founder-benefits li {
+  font-size: 0.85rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.founder-benefits li::before {
+  content: "\2014";
+  position: absolute;
+  left: 0;
+  color: var(--taupe);
+  font-size: 0.7rem;
+}
+
+.founder-quote {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--head);
+  margin-top: 1rem;
+}
+
 .plan {
   border: 1px solid var(--line);
   padding: 2rem 1.8rem;
@@ -665,6 +718,13 @@ h1 em {
   flex-direction: column;
   align-items: center;
   gap: 2px;
+}
+
+.footer-address {
+  font-size: 0.75rem;
+  color: var(--taupe);
+  margin-top: 0.8rem;
+  font-style: italic;
 }
 
 /* ══════════════════════════════════════
