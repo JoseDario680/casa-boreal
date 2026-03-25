@@ -141,8 +141,20 @@ img { max-width: 100%; display: block; }
    HERO
    ══════════════════════════════════════ */
 .hero {
-  padding-top: 18vh;
+  padding-top: 0;
   padding-bottom: 14vh;
+}
+
+/* ─── Hero image ─── */
+.hero-img {
+  margin: 0 -7vw 3.5rem;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 /* ─── Social bar ─── */
@@ -786,6 +798,8 @@ h1 em {
 
   .nav a:hover { color: var(--dark); }
 
+  .hero-img { margin-left: -10vw; margin-right: -10vw; }
+
   .sched-grid { grid-template-columns: repeat(3, 1fr); }
   .plan-grid  { grid-template-columns: repeat(3, 1fr); }
   .founder-grid { grid-template-columns: repeat(2, 1fr); }
@@ -823,6 +837,8 @@ h1 em {
 
   .header { padding: 1rem 14vw; }
   .footer { padding: 3rem 14vw; }
+
+  .hero-img { margin-left: -14vw; margin-right: -14vw; }
 
   h1 { font-size: 3.6rem; max-width: 800px; }
 
