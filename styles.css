@@ -151,24 +151,11 @@ img { max-width: 100%; display: block; }
   margin: 0 -7vw 3.5rem;
 }
 
-.hero-img::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(250, 248, 245, 0) 60%,
-    rgba(250, 248, 245, 0.55) 100%
-  );
-  pointer-events: none;
-}
-
 .hero-img img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
-  opacity: 0.92;
 }
 
 /* ─── Social bar ─── */
