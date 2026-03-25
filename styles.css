@@ -157,8 +157,8 @@ img { max-width: 100%; display: block; }
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(250, 248, 245, 0) 40%,
-    rgba(250, 248, 245, 0.85) 100%
+    rgba(250, 248, 245, 0) 60%,
+    rgba(250, 248, 245, 0.55) 100%
   );
   pointer-events: none;
 }
@@ -168,7 +168,7 @@ img { max-width: 100%; display: block; }
   height: auto;
   display: block;
   object-fit: cover;
-  opacity: 0.85;
+  opacity: 0.92;
 }
 
 /* ─── Social bar ─── */
