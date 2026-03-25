@@ -486,6 +486,16 @@ h1 em {
   margin-top: 1rem;
 }
 
+.founder-limit {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-top: 1.2rem;
+}
+
 .plan {
   border: 1px solid var(--line);
   padding: 2rem 1.8rem;
