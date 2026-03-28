@@ -147,9 +147,21 @@ img { max-width: 100%; display: block; }
 
 /* ─── Hero image ─── */
 .hero-img, .section-img {
+  position: relative;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-bottom: 3.5rem;
+}
+
+.hero-img::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
 }
 
 .hero-img img, .section-img img {
