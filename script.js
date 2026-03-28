@@ -8,10 +8,16 @@
   const nav = document.querySelector(".nav");
   if (burger) {
     burger.addEventListener("click", () => {
-      nav.classList.toggle("open");
+      const isOpen = nav.classList.toggle("open");
+      burger.classList.toggle("active", isOpen);
+      burger.setAttribute("aria-expanded", isOpen);
     });
     nav.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => nav.classList.remove("open"))
+      a.addEventListener("click", () => {
+        nav.classList.remove("open");
+        burger.classList.remove("active");
+        burger.setAttribute("aria-expanded", "false");
+      })
     );
   }
 
