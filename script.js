@@ -55,7 +55,7 @@
 
     dots.forEach((d, i) => d.addEventListener("click", () => goTo(i)));
 
-    setInterval(() => goTo((current + 1) % total), 5000);
+    setInterval(() => goTo((current + 1) % total), 3000);
   }
 
   /* ── Form feedback ── */
