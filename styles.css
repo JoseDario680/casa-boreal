@@ -155,7 +155,66 @@ img { max-width: 100%; display: block; }
   padding-bottom: 14vh;
 }
 
-/* ─── Hero image ─── */
+/* ─── Hero carousel ─── */
+.hero-carousel {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+}
+
+.hero-carousel::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25%;
+  background: linear-gradient(to bottom, transparent, rgba(250, 248, 245, 0.75));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-track {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hero-track img {
+  width: 100vw;
+  min-width: 100vw;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.6rem;
+  z-index: 3;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #4d453b;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #4d453b;
+}
+
+/* ─── Hero image (single) & section-img ─── */
 .hero-img, .section-img {
   position: relative;
   width: 100vw;
