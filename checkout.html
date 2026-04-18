@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membresía Fundadora · Casa Boreal</title>
+    <meta name="description" content="Sé parte del origen. Asegura tu lugar como miembro fundador/a de Casa Boreal Wellness Club." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+
+    <!-- Stripe JS -->
+    <script src="https://js.stripe.com/v3/" defer></script>
+    <!-- MercadoPago JS -->
+    <script src="https://sdk.mercadopago.com/js/v2" defer></script>
+
+    <link rel="stylesheet" href="styles.css?v=23" />
+    <link rel="stylesheet" href="checkout.css?v=1" />
+  </head>
+  <body>
+
+    <!-- ══ Header ══ -->
+    <header class="header">
+      <a href="index.html" class="logo">
+        <span class="logo-name">Casa Boreal</span>
+        <span class="logo-sub">Wellness Club</span>
+      </a>
+      <button class="burger" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="nav">
+        <a href="index.html#disciplinas">Disciplinas</a>
+        <a href="index.html#planes">Paquetes</a>
+        <a href="index.html#preventa">Preventa</a>
+        <a href="https://wa.me/522206786286?text=Hola!+Me+gustaria+obtener+mas+informacion+sobre+Casa+Boreal.+Gracias!" target="_blank" rel="noopener noreferrer">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- ══ PANTALLA PRINCIPAL ══ -->
+      <div id="checkout-main">
+
+        <!-- Hero -->
+        <section class="co-hero fade-in">
+          <p class="co-eyebrow">Founder Membership · Preventa exclusiva</p>
+          <h1>Sé parte<br>del <em>origen.</em></h1>
+          <p class="co-sub">Sólo 40 lugares disponibles en el mundo. Una vez que cierren, se cierran para siempre.</p>
+        </section>
+
+        <!-- Razón de ser -->
+        <section class="co-why fade-in">
+          <div class="co-why-inner">
+            <h2>¿Por qué una Membresía Fundadora?</h2>
+            <p>Casa Boreal nació de la convicción de que el movimiento es un ritual, no una obligación. Antes de abrir nuestras puertas al mundo, queremos que tú — nuestra primera comunidad — seas parte de esa historia.</p>
+            <p>La Membresía Fundadora no es una promoción. Es un reconocimiento a quienes confían en el proyecto desde el inicio y merecen vivir Casa Boreal a un precio que ninguna persona fuera de este círculo tendrá jamás.</p>
+            <p class="co-why-quote"><em>&ldquo;No es solo una membresía, es ser parte del origen.&rdquo;</em></p>
+          </div>
+        </section>
+
+        <!-- Beneficios strip -->
+        <section class="co-benefits fade-in">
+          <div class="co-benefits-grid">
+            <div class="co-benefit">
+              <span class="co-benefit-icon">◇</span>
+              <h3>Precio bloqueado de por vida</h3>
+              <p>Tu tarifa especial de fundador/a se mantiene intacta mientras tu membresía esté activa. Aunque los precios suban, el tuyo no.</p>
+            </div>
+            <div class="co-benefit">
+              <span class="co-benefit-icon">◇</span>
+              <h3>Prioridad absoluta</h3>
+              <p>Reserva antes que nadie. Elige tus horarios favoritos antes de que abran al público general.</p>
+            </div>
+            <div class="co-benefit">
+              <span class="co-benefit-icon">◇</span>
+              <h3>Acceso a experiencias privadas</h3>
+              <p>Eventos exclusivos, clases especiales y experiencias reservadas solo para miembros fundadores.</p>
+            </div>
+            <div class="co-benefit">
+              <span class="co-benefit-icon">◇</span>
+              <h3>Las tres disciplinas</h3>
+              <p>Barre, Pilates y Yoga. Acceso completo al universo de movimiento de Casa Boreal.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Selector de plan -->
+        <section class="co-plans fade-in">
+          <h2>Elige tu membresía</h2>
+          <p class="co-plans-note">*Limitado a solo 40 membresías fundadoras*</p>
+
+          <div class="co-plan-grid">
+
+            <label class="co-plan" data-plan="popular">
+              <input type="radio" name="plan" value="popular" data-amount="110000" data-label="Popular · 12 Clases" />
+              <div class="co-plan-inner">
+                <span class="co-badge">Fundadora</span>
+                <h3>Popular</h3>
+                <p class="co-plan-detail">12 Clases · 1 clase por día</p>
+                <p class="co-plan-price">$1,100 <span>/mes</span></p>
+                <p class="co-plan-compare">Precio normal: <s>$1,320</s></p>
+              </div>
+              <div class="co-plan-check"><span></span></div>
+            </label>
+
+            <label class="co-plan" data-plan="ilimitado">
+              <input type="radio" name="plan" value="ilimitado" data-amount="220000" data-label="Ilimitado · 30 días" />
+              <div class="co-plan-inner">
+                <span class="co-badge">Fundadora</span>
+                <h3>Ilimitado</h3>
+                <p class="co-plan-detail">30 días · 1 clase por día</p>
+                <p class="co-plan-price">$2,200 <span>/mes</span></p>
+                <p class="co-plan-compare">Precio normal: <s>$2,500</s></p>
+              </div>
+              <div class="co-plan-check"><span></span></div>
+            </label>
+
+          </div>
+
+          <button id="btn-continuar" class="cta co-cta-main" disabled>
+            Continuar al pago
+          </button>
+        </section>
+
+        <!-- Seguridad -->
+        <section class="co-trust fade-in">
+          <div class="co-trust-row">
+            <span class="co-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Pago 100% seguro
+            </span>
+            <span class="co-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              Stripe &amp; MercadoPago
+            </span>
+            <span class="co-trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              Tarjeta o efectivo
+            </span>
+          </div>
+        </section>
+
+      </div><!-- /checkout-main -->
+
+
+      <!-- ══ PANTALLA PAGO ══ -->
+      <div id="checkout-payment" class="hidden">
+        <section class="co-payment fade-in">
+          <button class="co-back" id="btn-back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
+            Cambiar plan
+          </button>
+
+          <div class="co-payment-header">
+            <p class="co-eyebrow">Membresía Fundadora</p>
+            <h2 id="payment-plan-title">Popular · 12 Clases</h2>
+            <p class="co-payment-price" id="payment-plan-price">$1,100 <span>/mes</span></p>
+          </div>
+
+          <!-- Selector método de pago -->
+          <div class="co-method-tabs">
+            <button class="co-method-tab active" data-method="stripe">
+              <svg viewBox="0 0 32 21" fill="none"><rect width="32" height="21" rx="3" fill="#f4f1ec"/><path d="M14.5 7.5c0-.8.7-1.5 2-1.5 1.7 0 3.4.5 4.5 1.3V4.1C19.8 3.4 18.2 3 16.5 3 13.4 3 11 4.7 11 7.7c0 4.6 6.3 3.9 6.3 5.8 0 .9-.8 1.2-2 1.2-1.7 0-3.7-.7-5-1.7v3.3c1.4.6 2.9 1 5 1 3.2 0 5.7-1.6 5.7-4.6-.1-5-6.5-4.1-6.5-6.2z" fill="#6b6155"/></svg>
+              Tarjeta
+            </button>
+            <button class="co-method-tab" data-method="mercadopago">
+              <svg viewBox="0 0 64 21" fill="none"><text x="0" y="16" font-family="Jost,sans-serif" font-size="13" fill="#6b6155">MercadoPago</text></svg>
+              MercadoPago
+            </button>
+          </div>
+
+          <!-- ─── Formulario Stripe ─── -->
+          <div id="form-stripe" class="co-form">
+            <form id="stripe-form">
+              <div class="co-field-row">
+                <div class="co-field">
+                  <label>Nombre completo</label>
+                  <input type="text" id="stripe-name" placeholder="Como aparece en la tarjeta" autocomplete="cc-name" required />
+                </div>
+                <div class="co-field">
+                  <label>Correo electrónico</label>
+                  <input type="email" id="stripe-email" placeholder="tu@correo.com" autocomplete="email" required />
+                </div>
+              </div>
+              <div class="co-field">
+                <label>Datos de tarjeta</label>
+                <div id="stripe-card-element" class="co-card-element">
+                  <!-- Stripe Elements se monta aquí -->
+                </div>
+                <div id="stripe-card-errors" class="co-card-error" role="alert"></div>
+              </div>
+              <button type="submit" class="cta co-cta-main" id="stripe-submit">
+                Pagar $1,100 / mes
+              </button>
+              <p class="co-legal">Al continuar aceptas nuestros <a href="#">Términos y Condiciones</a>. Tu membresía se renueva mensualmente. Puedes cancelar en cualquier momento con 5 días de anticipación.</p>
+            </form>
+          </div>
+
+          <!-- ─── Botón MercadoPago ─── -->
+          <div id="form-mercadopago" class="co-form hidden">
+            <div class="co-mp-info">
+              <p>Paga con tu método favorito: tarjeta de crédito, débito, OXXO, transferencia o en efectivo.</p>
+            </div>
+            <!-- MP Checkout Brick se monta aquí -->
+            <div id="mp-card-form"></div>
+            <button class="cta co-cta-main" id="mp-submit">
+              Pagar con MercadoPago
+            </button>
+            <p class="co-legal">Al continuar aceptas nuestros <a href="#">Términos y Condiciones</a>. Tu membresía se renueva mensualmente. Puedes cancelar en cualquier momento con 5 días de anticipación.</p>
+          </div>
+
+        </section>
+      </div><!-- /checkout-payment -->
+
+
+      <!-- ══ PANTALLA GRACIAS ══ -->
+      <div id="checkout-thanks" class="hidden">
+        <section class="co-thanks fade-in">
+          <div class="co-thanks-symbol">✦</div>
+          <p class="co-eyebrow">Membresía Fundadora confirmada</p>
+          <h1>Gracias por elegir<br><em>Casa Boreal.</em></h1>
+          <p class="co-thanks-msg">Decidiste ser parte del origen. Eso significa más de lo que imaginas.</p>
+          <div class="co-thanks-detail" id="thanks-detail">
+            <p>Recibirás un correo de confirmación en los próximos minutos con todos los detalles de tu membresía.</p>
+            <p>Mientras tanto, puedes escribirnos a WhatsApp para elegir tus horarios favoritos antes de que abran al público.</p>
+          </div>
+          <div class="co-thanks-actions">
+            <a class="cta" href="https://wa.me/522206786286?text=Hola!+Acabo+de+adquirir+mi+Membresia+Fundadora+y+me+gustaria+agendar+mis+primeras+clases." target="_blank" rel="noopener noreferrer">
+              Agendar mis clases
+            </a>
+            <a class="cta-s" href="index.html">Volver al inicio</a>
+          </div>
+          <div class="co-thanks-values">
+            <span>Barre</span><span class="co-dot-sep">·</span>
+            <span>Pilates</span><span class="co-dot-sep">·</span>
+            <span>Yoga</span>
+          </div>
+        </section>
+      </div><!-- /checkout-thanks -->
+
+    </main>
+
+    <!-- WhatsApp flotante -->
+    <a class="wa" href="https://wa.me/message/LC6KSNQ35RHPH1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.96 7.96 0 01-4.106-1.138l-.294-.176-2.866.852.852-2.866-.176-.294A7.96 7.96 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+    </a>
+
+    <footer class="footer">
+      <span class="logo-name">Casa Boreal</span>
+      <span class="logo-sub">Wellness Club</span>
+      <p class="footer-address">Plaza las Fuentes, calle 39 Oriente, col el Mirador.</p>
+      <span class="logo-sub">Wellness Club</span>
+    </footer>
+
+    <script src="script.js?v=23"></script>
+    <script src="checkout.js?v=1"></script>
+  </body>
+</html>

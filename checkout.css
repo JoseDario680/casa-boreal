@@ -1,0 +1,583 @@
+/* ══════════════════════════════════════
+   Casa Boreal · Checkout / Membresía Fundadora
+   ══════════════════════════════════════ */
+
+.hidden { display: none !important; }
+
+/* ── Eyebrow label ── */
+.co-eyebrow {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--taupe);
+  margin-bottom: 1.4rem;
+  text-transform: uppercase;
+}
+
+/* ══ HERO ══ */
+.co-hero {
+  padding: 12vh 7vw 8vh;
+  border-bottom: 1px solid var(--line);
+}
+
+.co-hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: clamp(2.8rem, 9vw, 5.5rem);
+  line-height: 1.05;
+  color: var(--dark);
+  margin-bottom: 1.8rem;
+}
+
+.co-hero h1 em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.co-sub {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--text);
+  max-width: 480px;
+  line-height: 1.8;
+}
+
+/* ══ WHY SECTION ══ */
+.co-why {
+  padding: 8vh 7vw;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--line);
+}
+
+.co-why-inner {
+  max-width: 640px;
+}
+
+.co-why h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  color: var(--dark);
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.02em;
+}
+
+.co-why p {
+  font-size: 0.92rem;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+  line-height: 1.85;
+}
+
+.co-why-quote {
+  font-family: "Cormorant Garamond", serif !important;
+  font-style: italic !important;
+  font-size: 1.15rem !important;
+  color: var(--head) !important;
+  margin-top: 2rem !important;
+  border-left: 2px solid var(--taupe);
+  padding-left: 1.2rem;
+}
+
+/* ══ BENEFITS ══ */
+.co-benefits {
+  padding: 8vh 7vw;
+  border-bottom: 1px solid var(--line);
+}
+
+.co-benefits-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.co-benefit {
+  border-top: 1px solid var(--line);
+  padding-top: 2rem;
+}
+
+.co-benefit-icon {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--taupe);
+  margin-bottom: 0.9rem;
+  letter-spacing: 0.1em;
+}
+
+.co-benefit h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--dark);
+  margin-bottom: 0.6rem;
+}
+
+.co-benefit p {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.8;
+  max-width: 360px;
+}
+
+@media (min-width: 700px) {
+  .co-benefits-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ══ PLAN SELECTOR ══ */
+.co-plans {
+  padding: 8vh 7vw 6vh;
+}
+
+.co-plans h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  color: var(--dark);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.02em;
+}
+
+.co-plans-note {
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-bottom: 2.5rem;
+}
+
+.co-plan-grid {
+  display: grid;
+  gap: 1.2rem;
+  max-width: 680px;
+  margin-bottom: 2.8rem;
+}
+
+@media (min-width: 600px) {
+  .co-plan-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.co-plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  padding: 0;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background: var(--bg);
+}
+
+.co-plan input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.co-plan:hover {
+  border-color: var(--taupe);
+}
+
+.co-plan:has(input:checked) {
+  border-color: var(--dark);
+}
+
+.co-plan-inner {
+  padding: 2rem 1.8rem 1.5rem;
+  flex: 1;
+}
+
+.co-badge {
+  display: inline-block;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  border: 1px solid var(--taupe);
+  padding: 0.3rem 0.8rem;
+  margin-bottom: 1.1rem;
+}
+
+.co-plan-inner h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--dark);
+  margin-bottom: 0.3rem;
+}
+
+.co-plan-detail {
+  font-size: 0.8rem;
+  color: var(--taupe);
+  margin-bottom: 1rem;
+}
+
+.co-plan-price {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--dark);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.co-plan-price span {
+  font-family: "Jost", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--taupe);
+}
+
+.co-plan-compare {
+  font-size: 0.75rem;
+  color: var(--taupe);
+}
+
+.co-plan-compare s {
+  color: var(--text);
+}
+
+.co-plan-check {
+  height: 3px;
+  background: transparent;
+  transition: background 0.3s;
+}
+
+.co-plan:has(input:checked) .co-plan-check {
+  background: var(--dark);
+}
+
+/* ══ CTA MAIN ══ */
+.co-cta-main {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+}
+
+.co-cta-main:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ══ TRUST BAR ══ */
+.co-trust {
+  padding: 4vh 7vw;
+  border-top: 1px solid var(--line);
+  background: var(--bg-alt);
+}
+
+.co-trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem 3rem;
+}
+
+.co-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--head);
+}
+
+.co-trust-item svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  stroke: var(--taupe);
+}
+
+/* ══ PAYMENT SCREEN ══ */
+.co-payment {
+  padding: 8vh 7vw;
+  max-width: 700px;
+}
+
+.co-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "Jost", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 3rem;
+  transition: color 0.3s;
+}
+
+.co-back:hover { color: var(--dark); }
+
+.co-back svg {
+  width: 14px;
+  height: 14px;
+}
+
+.co-payment-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.co-payment-header h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  color: var(--dark);
+  margin-bottom: 0.4rem;
+}
+
+.co-payment-price {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  color: var(--dark);
+}
+
+.co-payment-price span {
+  font-family: "Jost", sans-serif;
+  font-size: 0.78rem;
+  color: var(--taupe);
+}
+
+/* ── Tabs método de pago ── */
+.co-method-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.co-method-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Jost", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.8rem 1.5rem 0.8rem 0;
+  margin-bottom: -1px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.co-method-tab svg {
+  height: 18px;
+  width: auto;
+}
+
+.co-method-tab.active {
+  color: var(--dark);
+  border-bottom-color: var(--dark);
+}
+
+/* ── Formulario ── */
+.co-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.co-field-row {
+  display: grid;
+  gap: 1.2rem;
+}
+
+@media (min-width: 600px) {
+  .co-field-row { grid-template-columns: 1fr 1fr; }
+}
+
+.co-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.co-field label {
+  font-family: "Jost", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--head);
+}
+
+.co-field input {
+  font-family: "Jost", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--dark);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  padding: 0.85rem 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.co-field input:focus {
+  border-color: var(--taupe);
+}
+
+.co-card-element {
+  border: 1px solid var(--line);
+  padding: 0.85rem 1rem;
+  background: var(--bg);
+  min-height: 44px;
+  transition: border-color 0.3s;
+}
+
+.co-card-element.StripeElement--focus {
+  border-color: var(--taupe);
+}
+
+.co-card-error {
+  font-size: 0.78rem;
+  color: #a0776a;
+  min-height: 1.2rem;
+}
+
+.co-legal {
+  font-size: 0.72rem;
+  color: var(--taupe);
+  line-height: 1.7;
+}
+
+.co-legal a {
+  color: var(--head);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── MercadoPago info ── */
+.co-mp-info {
+  border: 1px solid var(--line);
+  padding: 1.4rem 1.6rem;
+  background: var(--bg-alt);
+}
+
+.co-mp-info p {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ── Loading state ── */
+.co-form.loading button[type="submit"],
+.co-form.loading .co-cta-main {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.co-form.loading button[type="submit"]::after,
+.co-form.loading .co-cta-main::after {
+  content: " ···";
+}
+
+/* ══ THANKS SCREEN ══ */
+.co-thanks {
+  padding: 10vh 7vw 12vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.co-thanks-symbol {
+  font-size: 2rem;
+  color: var(--taupe);
+  margin-bottom: 2rem;
+  animation: pulse-symbol 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-symbol {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.9); }
+}
+
+.co-thanks h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: clamp(2.4rem, 8vw, 4.5rem);
+  line-height: 1.1;
+  color: var(--dark);
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.co-thanks h1 em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.co-thanks-msg {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: var(--head);
+  max-width: 480px;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+}
+
+.co-thanks-detail {
+  max-width: 480px;
+  margin-bottom: 3rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 1.8rem 0;
+}
+
+.co-thanks-detail p {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
+}
+
+.co-thanks-detail p:last-child { margin-bottom: 0; }
+
+.co-thanks-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  margin-bottom: 4rem;
+}
+
+.co-thanks-values {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: "Jost", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+
+.co-dot-sep {
+  color: var(--line);
+}
+
+/* ══ Fade-in (hereda de styles.css) ══ */

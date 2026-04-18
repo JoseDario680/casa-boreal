@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "name": "casa-boreal",
+  "dependencies": {
+    "stripe": "^17.0.0"
+  }
+}
