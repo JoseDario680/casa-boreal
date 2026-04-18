@@ -1,16 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "",
-  "outputDirectory": ".",
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": false,
-  "functions": {
-    "api/*.js": {
-      "memory": 128,
-      "maxDuration": 10
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
